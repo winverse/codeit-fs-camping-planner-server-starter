@@ -1,0 +1,8 @@
+import { HTTP_STATUS } from '#constants';
+import { HttpException } from './http.exception.js';
+
+export class ConflictException extends HttpException {
+  constructor(message) {
+    super(HTTP_STATUS.CONFLICT, message);
+  }
+}
